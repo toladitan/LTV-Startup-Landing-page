@@ -4,80 +4,144 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WNDRTRIP – Your Next Adventure Awaits</title>
+  <!-- Google Fonts for a modern look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Basic styling for the landing page */
+    /* Vibrant and modern styling */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
       color: #333;
+      overflow-x: hidden;
     }
     header {
-      background: url('https://via.placeholder.com/1500x500?text=Adventure+Awaits') no-repeat center/cover;
-      padding: 100px 20px;
-      text-align: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: #fff;
+      padding: 120px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      background: url('https://via.placeholder.com/1500x500?text=Adventure+Awaits') no-repeat center/cover;
+      opacity: 0.3;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: 1;
+    }
+    header h1, header p, header .cta-button {
+      position: relative;
+      z-index: 2;
     }
     header h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin: 0;
+      animation: fadeInDown 1s ease-out;
     }
     header p {
-      font-size: 1.2em;
+      font-size: 1.3em;
       margin-top: 10px;
+      animation: fadeInUp 1s ease-out;
     }
     .cta-button {
       display: inline-block;
-      background-color: #ff6600;
-      color: #fff;
+      background-color: #ffdd57;
+      color: #333;
       padding: 15px 30px;
-      margin-top: 20px;
+      margin-top: 25px;
       text-decoration: none;
       font-size: 1.2em;
-      border-radius: 5px;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     }
     .content {
-      padding: 40px 20px;
+      padding: 60px 20px;
+      background-color: #fff;
+      border-radius: 20px 20px 0 0;
+      margin-top: -30px;
       text-align: center;
     }
     .content h2 {
       margin-top: 0;
+      color: #764ba2;
+      font-size: 2em;
+    }
+    .content p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 20px auto;
     }
     .features {
       list-style: none;
       padding: 0;
-      margin: 20px 0;
+      margin: 40px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .features li {
-      margin: 10px 0;
+      background-color: #fefefe;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex: 1 1 250px;
+      max-width: 300px;
       font-size: 1.1em;
+      transition: transform 0.3s ease;
+    }
+    .features li:hover {
+      transform: translateY(-5px);
     }
     footer {
-      background-color: #333;
+      background-color: #764ba2;
       color: #fff;
       text-align: center;
       padding: 20px;
+      font-size: 0.9em;
+    }
+    /* Simple fade-in animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>WNDRTRIP</h1>
-    <p>Discover unforgettable adventures and plan your next trip with ease.</p>
+    <p>Discover unforgettable adventures curated for you.</p>
     <a href="#explore" class="cta-button">Start Your Journey</a>
   </header>
 
   <div class="content" id="explore">
     <h2>About WNDRTRIP</h2>
     <p>
-      At WNDRTRIP, travel is reimagined for the modern explorer. Our platform curates personalized itineraries,
-      connects you with local insights, and makes booking seamless so that your next adventure is just a click away.
+      At WNDRTRIP, travel is reimagined for the modern explorer. Our platform delivers personalized itineraries,
+      authentic local insights, and seamless booking experiences. Get ready to explore the world in style.
     </p>
     <h2>Key Features</h2>
     <ul class="features">
-      <li>Personalized Trip Recommendations</li>
-      <li>Easy Booking & Itinerary Planning</li>
-      <li>Local Insights & Authentic Reviews</li>
+      <li>Custom Trip Recommendations</li>
+      <li>Instant Booking & Itinerary Planning</li>
+      <li>Real Reviews from Locals</li>
     </ul>
   </div>
 
